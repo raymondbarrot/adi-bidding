@@ -1,5 +1,6 @@
 package com.example.adi.bidding.util;
 
+import com.example.adi.bidding.constants.BidStatus;
 import com.example.adi.bidding.entity.BidOffer;
 import com.example.adi.bidding.model.BidRequest;
 
@@ -18,7 +19,7 @@ public class ObjectCreationUtil {
                 .bidId(request.getBidId())
                 .amount(request.getAmount())
                 .numberOfResources(request.getNumberOfResources())
-                .status(request.getStatus())
+                .status(BidStatus.valueOf(request.getStatus()))
                 .itemCode(request.getItemCode())
                 .build();
     }

@@ -1,6 +1,9 @@
 package com.example.adi.bidding.entity;
 
+import com.example.adi.bidding.constants.BidStatus;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import lombok.*;
 
@@ -15,6 +18,9 @@ public class BidOffer {
     private String bidId;
     private Double amount;
     private Integer numberOfResources;
-	private String status;
+
+    @Enumerated(EnumType.STRING)
+	private BidStatus status;
+
 	private String itemCode;
 }
