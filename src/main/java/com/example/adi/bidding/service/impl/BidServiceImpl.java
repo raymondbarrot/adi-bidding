@@ -26,7 +26,7 @@ public class BidServiceImpl implements BidService {
         bidKafkaProducerService.publish(request);
         return BidResponse.builder()
                 .status("Success")
-                .reason("Inventory item successfully updated.")
+                .reason("Bid offer successfully added.")
                 .build();
     }
 
@@ -37,7 +37,7 @@ public class BidServiceImpl implements BidService {
         bidKafkaProducerService.publish(request);
         return BidResponse.builder()
                 .status("Success")
-                .reason("Inventory item successfully updated.")
+                .reason("Bid offer successfully updated.")
                 .build();
     }
 }
